@@ -16,6 +16,8 @@ import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
 import Home from "./pages/home/Home";
 import "./app.scss";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
 function App() {
   const Layout = () => {
     return (
@@ -63,6 +65,14 @@ function App() {
         {
           path: "/message/:id",
           element: <Message />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
         },
       ],
     },
