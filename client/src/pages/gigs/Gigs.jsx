@@ -40,7 +40,7 @@ function Gigs() {
       <div className="container">
         <span className="breadcrumbs">
           {" "}
-          Liverr &gt; Graphics & Design &gt;{" "}
+          Fiverr &gt; Graphics & Design &gt;{" "}
         </span>
         <h1>AI Artists</h1>
         <p>

@@ -24,6 +24,9 @@ function MyGigs() {
     },
   });
 
+  const handleDelete = (id) => {
+    mutation.mutate(id);
+  };
   return (
     <div className="myGigs">
       {isLoading ? (
@@ -47,22 +50,18 @@ function MyGigs() {
               <th> Action</th>
             </tr>
             {data.map((gig) => (
-              <tr>
+              <tr key={gig}>
                 <td>
-                  <img
-                    className="img"
-                    src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                    alt=""
-                  />
+                  <img className="img" src={gig.cover} alt="" />
                 </td>
-                <td>Gig1</td>
-                <td>88 </td>
-                <td>123</td>
+                <td>{gig.title}</td>
+                <td> {gig.price} </td>
+                <td>{gig.sales}</td>
                 <td>
                   <img
                     src="./img/delete.png"
                     className="delete"
-                    onClick={handledelete}
+                    onClick={() => handleDelete(gig._id)}
                     alt=""
                   />
                 </td>
