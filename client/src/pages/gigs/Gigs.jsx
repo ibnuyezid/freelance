@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./gigs.scss";
-import { gigs } from "../../data";
+
 import GigCard from "../../components/gigCard/GigCard";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
