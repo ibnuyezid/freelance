@@ -26,16 +26,16 @@
           text-align: start;
         }
         td {
-          .img {
+          img {
             width: 50px;
             height: 25px;
             object-fit: cover;
           }
-          .delete {
+          .message {
             width: 30px;
             height: 22px;
             cursor: pointer;
-
+            border-radius: 50%;
             object-fit: cover;
           }
         }

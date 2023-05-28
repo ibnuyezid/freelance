@@ -28,7 +28,7 @@ const OrderSchema = new Schema(
       required: true,
     },
     isCompleted: {
-      Boolean: true,
+      type: Boolean,
       default: false,
     },
     payment_intent: {
@@ -39,4 +39,4 @@ const OrderSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Order", userSchema);
+export default mongoose.model("Order", OrderSchema);
