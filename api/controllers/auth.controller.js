@@ -42,12 +42,7 @@ export const login = async (req, res, next) => {
     );
 
     const { password, ...others } = user._doc;
-    res
-      .cookie("accesskey", token, {
-        httpOnly: true,
-      })
-      .status(200)
-      .json(others);
+    res.cookie("accesskey", token).status(200).json(others);
   } catch (error) {
     next(error);
   }
