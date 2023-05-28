@@ -14,7 +14,9 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({ origin: "https://freelance-gig.netlify.app/", credentials: true })
+);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.Mongo_Url);
