@@ -15,7 +15,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors({ origin: "https://freelance-gig.netlify.app/", credentials: true })
+  cors({ origin: "https://freelance-gig.netlify.app", credentials: true })
 );
 const connect = async () => {
   try {
